@@ -1,0 +1,6 @@
+name: svm
+n_tot: 1000
+n_init: 30
+fn:
+  _target_: src.benchmarks.SVM
+  noise_std: 0.0  # Stdv of Gaussian noise to add to observations (to test optimization under noise)

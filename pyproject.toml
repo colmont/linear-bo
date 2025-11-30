@@ -1,0 +1,22 @@
+[project]
+name = "linear-bo"
+version = "0.1.0"
+description = "Code for the paper: 'We Still Don’t Understand High-Dimensional Bayesian Optimization'."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "botorch>=0.13",
+    "gpytorch>=1.14.3",
+    "hydra-core>=1.3",
+    "jaxtyping>=0.3.1",
+    "lassobench",
+    "torch>=2.1",
+    "guacamol[rdkit]",
+    "selfies>=2.2.0",
+    "setuptools",
+]
+
+# Map package names to their specific git sources, commits, and subdirectories
+[tool.uv.sources]
+lassobench = { git = "https://github.com/DonneyF/LassoBench.git", rev = "c8addba" }
+guacamol = { git = "https://github.com/DonneyF/guacamol.git", rev = "0d2e225ce2d96a4b60922f8ba18ce02b12ae5ba6" }

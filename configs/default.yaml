@@ -1,0 +1,28 @@
+defaults:
+  - benchmark: ???
+  - _self_
+
+seed: null
+device: "cuda"
+
+hydra:
+  job:
+    config:
+      override_dirname:
+        exclude_keys:
+          - local # Removes local specification in hydra dirname
+    name: ${now:%Y-%m-%d-%H-%M-%S} # Name of the job
+  run:
+    # For a single run (not a sweep), just use the job name
+    dir: ./outputs/${hydra.job.name}
+  sweep:
+    # For multirun/sweep create subfolders for each combination, named parameters
+    dir: ./outputs/${hydra.job.name}
+    subdir: ${hydra.job.override_dirname}
+
+benchmark:  # see subconfigs for benchmark-specific options
+  n_tot: ???  # Total number of points to evaluate function on
+  n_init: ???  # Number of initial points to sample
+  mujoco:
+    binary_path: null
+    apptainer_sif_path: null

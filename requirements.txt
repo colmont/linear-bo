@@ -1,0 +1,9 @@
+botorch >= 0.13
+gpytorch >= 1.14.3
+hydra-core >= 1.3
+jaxtyping >= 0.3.1
+LassoBench @ git+https://github.com/DonneyF/LassoBench.git@c8addba
+torch >= 2.1
+guacamol[rdkit] @ git+https://github.com/DonneyF/guacamol.git@0d2e225ce2d96a4b60922f8ba18ce02b12ae5ba6
+selfies >= 2.2.0
+setuptools

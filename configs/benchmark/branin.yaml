@@ -1,0 +1,7 @@
+name: branin
+n_tot: 200
+n_init: 10
+fn:
+  _target_: botorch.test_functions.synthetic.Branin
+  negate: true  # Negate the function to turn it into a minimization problem
+  noise_std: 0.0  # Stdv of Gaussian noise to add to observations (to test optimization under noise)

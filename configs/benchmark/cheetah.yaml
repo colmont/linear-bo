@@ -1,0 +1,8 @@
+name: cheetah
+n_tot: 1000
+n_init: 30
+fn:
+  _target_: src.benchmarks.Cheetah
+  noise_std: 0.0  # Stdv of Gaussian noise to add to observations (to test optimization under noise)
+  mujoco_binary_path: ${benchmark.mujoco.binary_path}
+  mujoco_apptainer_path: ${benchmark.mujoco.apptainer_sif_path}
